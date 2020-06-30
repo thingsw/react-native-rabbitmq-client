@@ -161,6 +161,18 @@ RCT_EXPORT_METHOD(addExchange:(NSDictionary *) config)
     }
 }
 
+RCT_EXPORT_METHOD(bind:(NSString *)exchange_name routing_key:(NSString *)routing_key) {
+    RMQExchange *x = [self.channel topic:exchange_name options:RMQExchangeDeclareDurable];
+    RMQQueue *q = [self.channel queue:@"" options:RMQQueueDeclareExclusive];
+    [q bind:x routingKey:routing_key];
+}
+
+RCT_EXPORT_METHOD(publish:(NSString *)message exchange_name:(NSString *)exchange_name routing_key:(NSString *)routing_key)
+{
+    RMQExchange *ex = [self.channel topic:exchange_name];
+    [ex publish:[message dataUsingEncoding:NSUTF8StringEncoding] routingKey:routing_key];
+}
+
 RCT_EXPORT_METHOD(publishToExchange:(NSString *)message exchange_name:(NSString *)exchange_name routing_key:(NSString *)routing_key message_properties:(NSDictionary *)message_properties)
 {
     id exchange_id = [self findExchange:exchange_name];

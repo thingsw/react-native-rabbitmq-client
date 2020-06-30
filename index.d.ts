@@ -10,6 +10,8 @@ export class Connection {
 
   on(event: string, callback: (event: Object) => any): void;
   removeon(event: string): void;
+
+  publish(msg: string, exchange_name: string, routing_key: string): void;
 }
 
 export class Exchange {

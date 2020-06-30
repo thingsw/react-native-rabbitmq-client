@@ -1,9 +1,9 @@
 {
   "author": {
-    "name": "Ko-ichi MAKITA"
+    "name": "Mincheol Kim"
   },
   "bugs": {
-    "url": "https://github.com/kmakita13714/react-native-amqp/issues"
+    "url": "https://github.com/thingsw/react-native-rabbitmq-client/issues"
   },
   "bundleDependencies": false,
   "dependencies": {},
@@ -11,7 +11,7 @@
   "description": "A RabbitMq component for React Native.",
   "devDependencies": {},
   "directories": {},
-  "homepage": "https://github.com/kmakita13714/react-native-amqp",
+  "homepage": "https://github.com/thingsw/react-native-rabbitmq-client",
   "keywords": [
     "react-native",
     "react",
@@ -25,13 +25,13 @@
       "email": "kmakita13714@gmail.com"
     }
   ],
-  "name": "react-native-amqp",
+  "name": "react-native-rabbitmq-client",
   "nativePackage": true,
   "optionalDependencies": {},
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kmakita13714/react-native-amqp.git"
+    "url": "git+https://github.com/thingsw/react-native-rabbitmq-client.git"
   },
   "scripts": {},
-  "version": "0.11.0-1"
+  "version": "0.11.0"
 }
